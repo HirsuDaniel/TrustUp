@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/daniel/TrustUp/TrustApp/TrustApp.csproj",
-      "projectName": "TrustApp",
-      "projectPath": "/home/daniel/TrustUp/TrustApp/TrustApp.csproj",
+      "projectUniqueName": "/home/daniel/TrustUp/backend/backend.csproj",
+      "projectName": "backend",
+      "projectPath": "/home/daniel/TrustUp/backend/backend.csproj",
       "packagesPath": "/home/daniel/.nuget/packages/",
-      "outputPath": "/home/daniel/TrustUp/TrustApp/obj/",
+      "outputPath": "/home/daniel/TrustUp/backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/daniel/.nuget/NuGet/NuGet.Config"
