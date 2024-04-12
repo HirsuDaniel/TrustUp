@@ -1,0 +1,15 @@
+<div class="login-content">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-content upload-file">
+            <label for="content">Email:</label>
+            <input type="email" [(ngModel)]="email" pInputText id="email" [ngModelOptions]="{ standalone: true }" required>
+        </div>
+        <div class="form-content upload-file">
+            <label for="content">Password:</label>
+            <input type="password" [(ngModel)]="password" pInputText id="password" [ngModelOptions]="{ standalone: true }" required>
+        </div>
+        <div class="button-submit">
+            <button pButton pRipple label="Submit" type="submit" class="p-button-success"></button>
+        </div>
+    </form>
+</div>

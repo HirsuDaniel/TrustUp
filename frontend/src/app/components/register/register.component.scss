@@ -1,0 +1,30 @@
+.register-wrapper {
+    display: flex;
+}
+
+.register-left-content {
+    width: 50%;
+    float: left;
+
+    .register-image {
+        background-image: url('../../../assets/images/bg.jpg');
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+    }
+}
+
+.register-right-content {
+    width: 50%;
+    float: right;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+
+    .form-content {
+        display: grid;
+        margin: 20px 0;
+
+        label {
+            margin: 10px 0;
+        }
+    }
+}

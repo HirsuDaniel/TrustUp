@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "7/yvsnDRTixX0vVer35KSjS1HzfM4rGxA/gc1emwSdw=",
+  "Hash": "zYjXIdO4y8mGYKKlslOpFIB3UyWquvCmm4Hl4Mz+JY0=",
   "Source": "backend",
   "BasePath": "_content/backend",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "backend/wwwroot",
+      "Source": "backend",
+      "ContentRoot": "/home/daniel/TrustUp/backend/wwwroot/",
+      "BasePath": "_content/backend",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
