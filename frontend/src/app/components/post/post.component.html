@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="wrapper-form">
+    <p-card [style]="{ width: '100%' }" class="card">
+        <form [formGroup]="postForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+            <div class="form-content">
+                <label for="content">Content:</label>
+                <textarea [autoResize]="true" rows="5" cols="30" pInputTextarea formControlName="content"></textarea>
+            </div>
+            <div class="form-content upload-file">
+                <input type="file" formControlName="postImage" id="postImage" (change)="onFileChange($event)" accept="image/*">
+                <div *ngIf="postForm.get('postImage')?.invalid && postForm.get('postImage')?.touched">
+                    Image is required.
+                </div>
+            </div>
+            <div class="button-submit">
+                <button pButton pRipple label="Submit" type="submit" class="p-button-success"></button>
+            </div>
+        </form>
+    </p-card>
+    <div>
+        <div *ngFor="let post of posts" class="content-posts">
+            <h3>{{ post.content }}</h3>
+            <img [src]="'data:image/png;base64,' + post.postImage" alt="Post Image">
+        </div>
+    </div>
+</div>

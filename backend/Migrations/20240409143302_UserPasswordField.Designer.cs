@@ -11,8 +11,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace backend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240401140632_SecondMigration")]
-    partial class SecondMigration
+    [Migration("20240409143302_UserPasswordField")]
+    partial class UserPasswordField
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,11 +26,11 @@ namespace backend.Migrations
 
             modelBuilder.Entity("Posts", b =>
                 {
-                    b.Property<int?>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Content")
                         .HasColumnType("text");
@@ -51,13 +51,55 @@ namespace backend.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int?>("Id"));
 
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Address")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ConcurrencyStamp")
                         .HasColumnType("text");
 
                     b.Property<string>("Email")
                         .HasColumnType("text");
 
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnType("text");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("text");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("text");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("UserName")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
